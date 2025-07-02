@@ -1,0 +1,18 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Hello World CloudFormation Stack",
+  "Resources": {
+    "DummyTopic": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {}
+    }
+  },
+  "Outputs": {
+    "Message": {
+      "Description": "A simple message",
+      "Value": {
+        "Fn::Sub": "Hello from CloudFormation in the ${AWS::Region} region!"
+      }
+    }
+  }
+}
